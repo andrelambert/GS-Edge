@@ -1,16 +1,14 @@
 # Edge Computing | Global Solution 
 
 # Objetivo
-O objetivo desta tarefa é o desenvolvimento de uma arquitetura para uma aplicação loT capaz de receber e transmitir dados provenientes de dispositivos conectados.
+O propósito desta tarefa consiste no desenvolvimento de uma arquitetura para uma aplicação IoT capaz de receber e transmitir dados provenientes de dispositivos conectados.
 
 # Resumo do projeto
-Nosso projeto, <b>"ID Médico"</b>, tem como objetivo o desenvolvimento de um software para aplicação mobile, onde o usuário consegue cadastrar todo seu histórico médico relevante (incluindo exames) e compartilhar essas informações com o profissional de saúde da sua escolha, no momento de uma consulta. Isso facilitaria muito a passagem da ficha médica de um paciente para um novo profissional, agilizando a consulta e melhorando o atendimento.
+O nosso projeto, intitulado "ID Médico", visa criar um software para aplicação móvel. Nele, os usuários podem cadastrar todo o seu histórico médico relevante, incluindo exames, e compartilhar essas informações com o profissional de saúde escolhido durante uma consulta. Essa abordagem simplifica significativamente a transição da ficha médica de um paciente para um novo profissional, agilizando o processo de consulta e aprimorando o atendimento.
 
 # Solução proposta para Edge Computing
-Por nosso projeto se tratar de um software, não fizemos uma simulação diretamente relacionada ao projeto. Porém, para demonstrar os conceitos aprendidos, adaptamos da seguinte forma: 
-
-
-
+Com o intuito de aplicar os conceitos aprendidos em IoT durante o curso de Edge Computing, propomos uma adaptação. Durante uma consulta online, a aferição de medidas vitais do paciente, como temperatura corporal, pressão sanguínea, batimento cardíaco ou oxigenação do sangue, torna-se desafiadora para o médico.
+Considerando essa limitação, planejamos utilizar dispositivos como Smartwatches, que possuem o hardware apropriado para essas medições. Os dados seriam então transmitidos para o nosso software. Para ilustrar essa proposta no site Wokwi, optamos por utilizar o sensor DHT22, que realiza medições de temperatura e umidade. Interpretaremos esses dados como temperatura corporal e oxigenação, respectivamente.
 
 # Instruções de uso 
 
