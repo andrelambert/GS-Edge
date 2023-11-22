@@ -54,11 +54,6 @@ void setup() {
 void loop() {
   // Leitura de temperatura e umidade do sensor DHT22
   TempAndHumidity data = dhtSensor.getTempAndHumidity();
-  
-  // Exibir no Serial Monitor
-  Serial.println("Temp: " + String(data.temperature, 2) + "°C");
-  Serial.println("Humidity: " + String(data.humidity, 1) + "%");
-  Serial.println("---");
 
   // Exibir no LCD
   lcd.clear();
@@ -66,18 +61,32 @@ void loop() {
   lcd.print("Temp: " + String(data.temperature, 2) + "C");
 
   lcd.setCursor(0, 1);
-  lcd.print("Humidity: " + String(data.humidity, 1) + "%");
+  lcd.print("Oxygen: " + String(data.humidity, 1) + "%");
 
-  // Aguardar por uma nova leitura do sensor (DHT22 tem uma taxa de amostragem de ~0.5Hz)
-  delay(2000);
 
-  // Enviar para o servidor MQTT
-  StaticJsonDocument<300> documentoJson;
-  documentoJson["temperature"] = data.temperature;
-  documentoJson["humidity"] = data.humidity;
-  char bufferJson[100];
-  serializeJson(documentoJson, bufferJson);
-  client.publish("topicoTDSPI", bufferJson);
-  delay(2000);
-  client.loop();
+// Enviar para o servidor MQTT
+StaticJsonDocument<300> documentTemperature;
+documentTemperature["variable"] = "temperature";
+documentTemperature["value"] = data.temperature;
+
+StaticJsonDocument<300> documentOxygen;
+documentOxygen["variable"] = "oxygen";
+documentOxygen["value"] = data.humidity;
+
+// Serializar e enviar a leitura de temperatura
+char bufferTemperature[100];
+serializeJson(documentTemperature, bufferTemperature);
+Serial.println(bufferTemperature);
+client.publish("leituras/temperatura", bufferTemperature);
+delay(2000);
+client.loop();
+
+// Serializar e enviar a leitura de oxigenação
+char bufferOxygen[100];
+serializeJson(documentOxygen, bufferOxygen);
+Serial.println(bufferOxygen);
+client.publish("leituras/oxigenacao", bufferOxygen);
+delay(2000);
+client.loop();
+
 }
