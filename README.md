@@ -4,7 +4,7 @@
 O propósito desta tarefa consiste no desenvolvimento de uma arquitetura para uma aplicação IoT capaz de receber e transmitir dados provenientes de dispositivos conectados.
 
 # Resumo do projeto
-O nosso projeto, intitulado "ID Médico", visa criar um software para aplicação móvel. Nele, os usuários podem cadastrar todo o seu histórico médico relevante, incluindo exames, e compartilhar essas informações com o profissional de saúde escolhido durante uma consulta. Essa abordagem simplifica significativamente a transição da ficha médica de um paciente para um novo profissional, agilizando o processo de consulta e aprimorando o atendimento.
+O nosso projeto, intitulado "WebConnect", visa criar um software para aplicação móvel. Nele, os usuários podem cadastrar todo o seu histórico médico relevante, incluindo exames, e compartilhar essas informações com o profissional de saúde de sua escolha. Essa abordagem simplifica significativamente a transição da ficha médica de um paciente para um novo profissional, agilizando o processo de consulta e aprimorando o atendimento.
 
 # Solução proposta para Edge Computing
 Com o intuito de aplicar os conceitos aprendidos em IoT durante o curso de Edge Computing, propomos uma adaptação. Durante uma consulta online, a aferição de medidas vitais do paciente, como temperatura corporal, pressão sanguínea, batimento cardíaco ou oxigenação do sangue, torna-se desafiadora para o médico.
