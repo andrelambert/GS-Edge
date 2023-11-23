@@ -12,7 +12,7 @@ Considerando essa limitação, planejamos utilizar dispositivos como Smartwatche
 
 # Instruções de uso 
 
-- Vídeo explicativo: 
+- Vídeo explicativo: https://youtu.be/9HpNe1gUPLg
 - Simulação: https://wokwi.com/projects/381660760030939137
 
 - Para que o sistema funcione, é necessário montar o circuito com o ESP32, DTH22 e display, conforme o diagrama abaixo. Em seguida, carregue o código correspondente em sua memória.
